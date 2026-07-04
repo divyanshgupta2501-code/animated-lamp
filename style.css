@@ -1,0 +1,974 @@
+/* ===================================
+   GOOGLE FONT
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===================================
+   VARIABLES
+=================================== */
+
+:root{
+
+    --bg:#09090b;
+
+    --bg2:#121218;
+
+    --card:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.12);
+
+    --white:#ffffff;
+
+    --text:#b5b5be;
+
+    --yellow:#FFD54A;
+
+    --yellow2:#FFB300;
+
+    --shadow:0 20px 40px rgba(0,0,0,.35);
+
+    --transition:.4s ease;
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+body{
+
+    background:var(--bg);
+
+    color:var(--white);
+
+    overflow:hidden;
+
+    min-height:100vh;
+}
+
+/* ===================================
+   LINKS
+=================================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    border:none;
+
+    outline:none;
+}
+
+/* ===================================
+   INPUTS
+=================================== */
+
+input{
+
+    font-family:inherit;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+}
+
+/* ===================================
+   IMAGES
+=================================== */
+
+img{
+
+    display:block;
+
+    max-width:100%;
+}
+
+
+/* ===================================
+   MAIN CONTAINER
+=================================== */
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* ===================================
+   LEFT PANEL
+=================================== */
+
+.left-panel{
+    position: relative;
+    flex: 1.2;
+    background: linear-gradient(
+        135deg,
+        #09090b 0%,
+        #101018 100%
+    );
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Decorative Glow */
+
+.left-panel::before{
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    background: rgba(255,213,74,.08);
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    top: -150px;
+    left: -120px;
+}
+
+/* ===================================
+   RIGHT PANEL
+=================================== */
+
+.right-panel{
+    flex: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Right Background Glow */
+
+.right-panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:rgba(255,255,255,.03);
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    bottom:-150px;
+
+    right:-100px;
+}
+
+/* ===================================
+   HERO TEXT
+=================================== */
+
+.hero-text{
+
+    position:absolute;
+
+    bottom:80px;
+
+    left:60px;
+
+    width:420px;
+
+    z-index:10;
+}
+
+.hero-text h1{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+}
+
+.hero-text p{
+
+    color:var(--text);
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+/*====================================
+    HANGING WIRE
+====================================*/
+
+.wire{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:4px;
+    height:180px;
+    background:linear-gradient(
+        to bottom,
+        #555,
+        #999
+    );
+    z-index:5;
+}
+
+/*====================================
+    LAMP CONTAINER
+====================================*/
+
+.lamp{
+
+    position:absolute;
+
+    top:170px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:150px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    cursor:pointer;
+
+    z-index:20;
+
+    transition:.4s ease;
+}
+
+/*====================================
+    TOP CAP
+====================================*/
+
+.lamp-top{
+
+    width:24px;
+    height:14px;
+
+    background:#444;
+
+    border-radius:8px 8px 0 0;
+}
+
+/*====================================
+    LAMP SHADE
+====================================*/
+
+.lamp-body{
+
+    width:120px;
+    height:65px;
+
+    background:linear-gradient(
+        to bottom,
+        #5d5d5d,
+        #242424
+    );
+
+    border-radius:10px 10px 60px 60px;
+
+    box-shadow:
+    inset 0 6px 12px rgba(255,255,255,.08),
+    0 12px 25px rgba(0,0,0,.45);
+
+    position:relative;
+}
+
+/* Decorative bottom rim */
+
+.lamp-body::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:6px;
+    left:8px;
+
+    width:104px;
+    height:8px;
+
+    background:#1b1b1b;
+
+    border-radius:50px;
+}
+
+/*====================================
+    BULB
+====================================*/
+
+.bulb{
+
+    width:26px;
+    height:26px;
+
+    background:#888;
+
+    border-radius:50%;
+
+    margin-top:-10px;
+
+    transition:.5s;
+
+    position:relative;
+
+    z-index:-1;
+}
+
+/*====================================
+    LAMP HOVER
+====================================*/
+
+.lamp:hover{
+
+    transform:
+    translateX(-50%)
+    rotate(-3deg);
+}
+
+/*====================================
+    LAMP SHADOW
+====================================*/
+
+.lamp::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+    height:18px;
+
+    background:rgba(0,0,0,.45);
+
+    border-radius:50%;
+
+    bottom:-12px;
+
+    filter:blur(8px);
+
+    z-index:-2;
+}
+
+/*====================================
+    LAMP ON STATE
+====================================*/
+
+body.on .bulb{
+
+    background:#fff8b0;
+
+    box-shadow:
+    0 0 20px #fff,
+    0 0 40px #ffe082,
+    0 0 80px #ffd54a,
+    0 0 120px rgba(255,213,74,.6);
+}
+
+body.on .lamp-body{
+
+    box-shadow:
+    inset 0 6px 12px rgba(255,255,255,.1),
+    0 0 30px rgba(255,213,74,.25),
+    0 12px 30px rgba(0,0,0,.5);
+}
+
+/* ===================================
+   LIGHT CONE
+=================================== */
+
+.light{
+
+    position:absolute;
+
+    top:210px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:420px;
+    height:520px;
+
+    background: radial-gradient(
+        ellipse at top,
+        rgba(255, 245, 180, 0.9) 0%,
+        rgba(255, 220, 120, 0.35) 35%,
+        rgba(255, 200, 80, 0.12) 55%,
+        transparent 75%
+    );
+
+    clip-path: polygon(45% 0%, 55% 0%, 100% 100%, 0% 100%);
+
+    opacity:0;
+
+    transition: opacity .6s ease;
+
+    filter: blur(2px);
+
+    pointer-events:none;
+
+    z-index:10;
+}
+
+/* ===================================
+   LIGHT ON STATE
+=================================== */
+
+body.on .light{
+    opacity:1;
+}
+
+/* ===================================
+   ROOM AMBIENT GLOW (LEFT SIDE)
+=================================== */
+
+body.on .left-panel{
+
+    background: linear-gradient(
+        135deg,
+        #0c0c12 0%,
+        #151522 100%
+    );
+}
+
+/* Soft global glow overlay */
+
+body.on .left-panel::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(255,213,74,.08),
+        transparent 60%
+    );
+
+    pointer-events:none;
+}
+
+/* ===================================
+   LIGHT FLICKER EFFECT (OPTIONAL FEEL)
+=================================== */
+
+@keyframes flicker {
+
+    0%   { opacity:1; }
+    50%  { opacity:.85; }
+    100% { opacity:1; }
+}
+
+body.on .bulb{
+    animation: flicker 2.5s infinite ease-in-out;
+}
+
+
+/* ===================================
+   LOGIN CARD
+=================================== */
+
+.login-card{
+
+    width:360px;
+
+    padding:40px 35px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
+
+    color: var(--white);
+
+    position: relative;
+
+    z-index: 20;
+
+    transform: translateY(20px);
+
+    opacity: 0;
+
+    transition: .6s ease;
+}
+
+/* Show card when lamp is ON */
+
+body.on .login-card{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Title */
+
+.login-card h2{
+
+    font-size: 28px;
+
+    margin-bottom: 6px;
+}
+
+/* Subtitle */
+
+.login-card p{
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+/* ===================================
+   INPUT BOX
+=================================== */
+
+.input-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    padding: 14px 14px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    transition: .3s ease;
+}
+
+/* Hover / Focus effect */
+
+.input-box:hover{
+    border-color: rgba(255,213,74,.4);
+    box-shadow: 0 0 15px rgba(255,213,74,.08);
+}
+
+/* Input field */
+
+.input-box input{
+
+    width:100%;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+/* Icons */
+
+.input-box i{
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* Eye icon */
+
+#togglePassword{
+    cursor: pointer;
+    color: var(--text);
+}
+
+/* ===================================
+   OPTIONS ROW
+=================================== */
+
+.options{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size: 12px;
+
+    color: var(--text);
+
+    margin: 10px 0 20px;
+}
+
+.options input{
+    margin-right: 6px;
+}
+
+.options a{
+    color: var(--text);
+    transition: .3s;
+}
+
+.options a:hover{
+    color: var(--yellow);
+}
+
+/* ===================================
+   LOGIN BUTTON
+=================================== */
+
+button[type="submit"]{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--yellow),
+        var(--yellow2)
+    );
+
+    color:#111;
+
+    font-weight:600;
+
+    font-size:14px;
+
+    transition:.3s ease;
+
+    margin-top:10px;
+}
+
+/* Button hover */
+
+button[type="submit"]:hover{
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(255,213,74,.25);
+}
+
+/* ===================================
+   DIVIDER
+=================================== */
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:25px 0;
+
+    color: var(--text);
+
+    font-size:12px;
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background: rgba(255,255,255,0.1);
+}
+
+/* ===================================
+   CARD ENTRANCE ANIMATION (SMOOTHER)
+=================================== */
+
+@keyframes fadeUp {
+
+    from{
+        opacity:0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+body.on .login-card{
+    animation: fadeUp .8s ease forwards;
+}
+
+/* ===================================
+   HERO TEXT ANIMATION
+=================================== */
+
+.hero-text{
+
+    opacity:0;
+
+    transform: translateY(20px);
+
+    transition: 1s ease;
+}
+
+body.on .hero-text{
+    opacity:1;
+    transform: translateY(0);
+}
+
+/* ===================================
+   LAMP SWING ANIMATION
+=================================== */
+
+@keyframes swing {
+
+    0%   { transform: translateX(-50%) rotate(-3deg); }
+    50%  { transform: translateX(-50%) rotate(3deg); }
+    100% { transform: translateX(-50%) rotate(-3deg); }
+}
+
+body.on .lamp{
+    animation: swing 4s ease-in-out infinite;
+}
+
+/* ===================================
+   BULB PULSE GLOW
+=================================== */
+
+@keyframes pulseGlow {
+
+    0%{
+        box-shadow: 0 0 10px rgba(255,213,74,.2);
+    }
+
+    50%{
+        box-shadow:
+        0 0 20px rgba(255,213,74,.5),
+        0 0 60px rgba(255,213,74,.3),
+        0 0 100px rgba(255,213,74,.15);
+    }
+
+    100%{
+        box-shadow: 0 0 10px rgba(255,213,74,.2);
+    }
+}
+
+body.on .bulb{
+    animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* ===================================
+   INPUT FOCUS EFFECT
+=================================== */
+
+.input-box:focus-within{
+
+    border-color: rgba(255,213,74,.6);
+
+    box-shadow: 0 0 20px rgba(255,213,74,.15);
+
+    transform: scale(1.02);
+}
+
+/* ===================================
+   BUTTON PRESS EFFECT
+=================================== */
+
+button[type="submit"]:active{
+    transform: scale(0.98);
+}
+
+/* ===================================
+   SMOOTH PAGE TRANSITION
+=================================== */
+
+.left-panel,
+.right-panel{
+    transition: background .6s ease;
+}
+
+/* ===================================
+   TABLET (<= 1024px)
+=================================== */
+
+@media (max-width: 1024px){
+
+    .hero-text{
+        left: 30px;
+        bottom: 50px;
+        width: 320px;
+    }
+
+    .hero-text h1{
+        font-size: 40px;
+    }
+
+    .login-card{
+        width: 320px;
+        padding: 30px;
+    }
+
+    .lamp{
+        transform: translateX(-50%) scale(0.9);
+    }
+}
+
+/* ===================================
+   MOBILE (<= 768px)
+=================================== */
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    /* LEFT PANEL */
+    .left-panel{
+        flex: 1;
+        min-height: 45vh;
+    }
+
+    /* RIGHT PANEL */
+    .right-panel{
+        flex: 1;
+        min-height: 55vh;
+    }
+
+    /* CENTER LAMP */
+    .lamp{
+        top: 120px;
+        transform: translateX(-50%) scale(0.8);
+    }
+
+    .wire{
+        height: 120px;
+    }
+
+    /* HERO TEXT */
+    .hero-text{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 90%;
+    }
+
+    .hero-text h1{
+        font-size: 28px;
+    }
+
+    .hero-text p{
+        font-size: 14px;
+    }
+
+    /* LOGIN CARD */
+    .login-card{
+        width: 90%;
+        max-width: 340px;
+    }
+}
+
+/* ===================================
+   SMALL MOBILE (<= 480px)
+=================================== */
+
+@media (max-width: 480px){
+
+    .hero-text h1{
+        font-size: 24px;
+    }
+
+    .hero-text p{
+        font-size: 13px;
+    }
+
+    .input-box{
+        padding: 12px;
+    }
+
+    button[type="submit"]{
+        padding: 12px;
+    }
+}
+
+/* ===================================
+   FINAL POLISH
+=================================== */
+
+/* Smooth rendering */
+*{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent horizontal scroll */
+body{
+    overflow-x: hidden;
+}
+
+/* Better glow quality */
+body.on .light{
+    filter: blur(3px) saturate(1.2);
+}
+
+/* Better transitions everywhere */
+*{
+    transition: all .3s ease;
+}
+

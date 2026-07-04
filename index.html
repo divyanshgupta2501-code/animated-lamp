@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Lamp Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ================= LEFT SIDE ================= -->
+
+    <section class="left-panel">
+
+        <!-- Hanging Wire -->
+        <div class="wire"></div>
+
+        <!-- Lamp -->
+        <div class="lamp" id="lamp">
+
+            <div class="lamp-top"></div>
+
+            <div class="lamp-body"></div>
+
+            <div class="bulb"></div>
+
+        </div>
+
+        <!-- Light -->
+        <div class="light" id="light"></div>
+
+        <!-- Hero Text -->
+        <div class="hero-text">
+
+            <h1>Light Up Your Workspace</h1>
+
+            <p>
+                Click the lamp to illuminate the room and unlock your dashboard.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RIGHT SIDE ================= -->
+
+    <section class="right-panel">
+
+        <div class="login-card">
+
+            <h2>Welcome Back</h2>
+
+            <p>Sign in to continue</p>
+
+            <form>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input type="email" placeholder="Email Address">
+
+                </div>
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        id="password">
+
+                    <span id="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+
+                </div>
+
+                <div class="options">
+
+                    <label>
+
+                        <input type="checkbox">
+
+                        Remember Me
+
+                    </label>
+
+                    <a href="#">Forgot Password?</a>
+
+                </div>
+
+                <button type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <div class="divider">
+
+                <span>OR</span>
+
+            </div>
+
+            <div class="social-login">
+
+                <button class="google">
+
+                    <i class="fa-brands fa-google"></i>
+
+                    Google
+
+                </button>
+
+                <button class="github">
+
+                    <i class="fa-brands fa-github"></i>
+
+                    GitHub
+
+                </button>
+
+            </div>
+
+            <div class="signup">
+
+                Don't have an account?
+
+                <a href="#">Sign Up</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
